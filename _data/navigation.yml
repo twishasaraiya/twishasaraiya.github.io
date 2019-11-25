@@ -1,11 +1,11 @@
 # main links
 main:
   - title: "Blog"
-    url: https://twishasaraiya.github.io/blog/
+    url: /
   - title: "About"
-    url: https://twishasaraiya.github.io/about/
+    url: /about/
   - title: "Education"
-    url: https://twishasaraiya.github.io/education/
+    url: /education/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
