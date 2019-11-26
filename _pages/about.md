@@ -1,3 +1,10 @@
+---
+title: "About"
+excerpt: "Who am I?"
+sitemap: false
+permalink: /about/
+---
+
 Hi there,
 
 I am Twisha Saraiya, currently working as a **Software Developer** in Mumbai. Exploring **Deep learning** currently on 
