@@ -30,9 +30,9 @@ Ideally our `showSnackbar` funtion in a common service should allowing these par
 ```javascript
 function showSnackbar(message: string, type: string, position: string, duration: number){
   this._snackBar.openFromComponent(SnackbarComponent, {
-      type: type,
-      positon: string,
-      duration: duration
+      type: options.type,
+      positon: options.position,
+      duration: options.duration
       data: message
   });
 }
@@ -51,9 +51,9 @@ Now these are very real usecase and we will try to solve them one by one
 ```javascript
 function showSnackbar(message: string, options?: { type?: string, position?: string, duration?: number }){
   this._snackBar.openFromComponent(SnackbarComponent, {
-      type: type,
-      positon: string,
-      duration: duration
+      type: options.type,
+      positon: options.position,
+      duration: options.duration
       data: message
   });
 }
