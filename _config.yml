@@ -107,9 +107,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Hey,"
+  name             : "Hey, "
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **Software Developer** and a **Deep Learning Enthusisast**."
+  bio              : "I am a curious **Software Engineerr** and a **Deep Learning Enthusisast**. I maintain this blog as a diary for my software engineer journey"
   location         : "Mumbai"
   email            :
   links:
@@ -294,7 +294,8 @@ defaults:
       related: true
    - scope:
       path: "about"
+      type: pages
      values:
-      layout: single
+      layout: archive
 
 theme: jekyll-theme-cayman
