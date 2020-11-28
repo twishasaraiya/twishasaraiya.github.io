@@ -292,10 +292,10 @@ defaults:
       comments: true
       share: true
       related: true
-   - scope:
+  - scope:
       path: "about"
       type: pages
-     values:
+    values:
       layout: archive
 
 theme: jekyll-theme-cayman
