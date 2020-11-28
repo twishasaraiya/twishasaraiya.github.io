@@ -4,8 +4,8 @@ main:
     url: /
   - title: "About"
     url: /about/
-  - title: "Education"
-    url: /education/
+#   - title: "Education"
+#     url: /education/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
