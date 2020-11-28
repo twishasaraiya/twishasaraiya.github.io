@@ -293,7 +293,7 @@ defaults:
       share: true
       related: true
    - scope:
-      path: "/about"
+      path: "about"
      values:
       layout: single
 
