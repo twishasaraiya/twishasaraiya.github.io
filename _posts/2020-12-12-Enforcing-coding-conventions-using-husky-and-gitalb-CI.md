@@ -19,14 +19,14 @@ Few of basic checks that you can have in your CI pipeline are
 Some of the other checks that could be added are
 
 -  **[Code quality](https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html)** : You can have a code quality requirements that must be passed before it goes to production. This check provides you reports and how much more effort would be required on development side. You can provide data rather than words to the project manager. 
-- **Visual Tests** : Visual test in the merge request helps to understand how the look and feel of the button or any UI component has changed. If you are building a project with a frontend team, for every new feature or css changes it would be difficult for developers to provide screenshots for the reviewer to provide. There are multiple approaches that I have found on this and we are trying it out too. I will update this with my take on this later.
-- **[Security scanning](https://docs.gitlab.com/ee/user/application_security/)**: Keeping your application secure if very important part of the development process. It may so happen that your dependencies are outdated or have security issues. Or a team member has pushed some keys/access token/passwords in the codebase. There are many reasons your should have some form of automated security setup done for the project.
+- **Visual Tests** : Visual test in the merge request helps to understand how the look and feel of the button or any UI component has changed. If you are building a project with a frontend team, for every new feature or css changes it would be difficult for developers to provide screenshots for the reviewer. There are multiple approaches to automate this. I will update this post with my take on different approaches later or maybe write a separate blog.
+- **[Security scanning](https://docs.gitlab.com/ee/user/application_security/)**: Keeping your application secure is very important part of the development process. It may so happen that your dependencies are outdated or have security issues. Or a team member has pushed some keys/access tokens/passwords in the codebase. There are many reasons your should have some form of automated security setup done for the project if not for every pull request.
 
-Now you have multiple jobs running in your pipeline which take lets say any time between 5-15 mins to run. After the pipeline runs you realise that have some minor lint errors or your build is failing. So another thing that could be done is to stop the pipeline if your basic checks are failing. For large databases, even running all the unit tests would take time. So in the next step we will talk about how enforce the standards before you even push the changes and make a merge request
+Now you have multiple jobs running in your pipeline which take let's say any time between 5-15 mins to run. After the pipeline runs you realise that have some minor lint errors or your build is failing. Does the developer have to wait this long ? Can't we know it earlier ? So another thing that could be done is to stop the pipeline if your basic checks are failing and run other checks in parallel once your base check has passed. For large databases, even running all the unit tests would take time. So in the next step we will talk about how enforce the standards before you even push the changes and make a merge request
 
 ## **Fail Locally** - Make your developers life easier
 
-Developers need to ensure that code is formatted, linted, tested and most importantly it builds. As humans, it happens that we include errors in our code while pushing them. This is where [husky](https://www.npmjs.com/package/husky) comes into the picture. As per their official documentation,
+Developers need to ensure that code is formatted, linted, tested and most importantly it builds. As humans, it happens that we may unintentionally include sime error in our code while pushing them. This is where [husky](https://www.npmjs.com/package/husky) comes into the picture. As per their official documentation,
 
 > You can use it to lint your commit messages, run tests, lint code, etc... when you commit or push
 
@@ -40,17 +40,17 @@ Now you can setup different git hooks for reasons like
 
  - pre-commit hook: 
  
-      To run prettier and eslint before your code is committed. This ensures all your commits are formatted and linted and you dont need to make separate commits just to fix them when the error occurs in your CI pipeline. The developers are aware of the error earlier, therefore it saves time. Additionaly you could also do a lint check on the commit message here as well. Lets say you want all the developers to follow standard practices for commit messages so that it becomes easier to find which commit introduced a particular change. Depending on the standards and pattern that is to be followed a check can be added for commit messages as well. [Commitlint](https://www.npmjs.com/package/commitlint) packages helps you with this.
+      To run prettier and eslint before your code is committed. This ensures all your commits are formatted and linted and you dont need to make separate commits just to fix them when the error occurs in your CI pipeline. The developers are aware of the error earlier, therefore it saves time. Additionaly you could also do a lint check on the commit message here as well. Let's say you want all the developers to follow standard practices for commit messages so that it becomes easier to find which commit introduced a particular change. Depending on the standards and pattern that is to be followed a check can be added for commit messages as well. [Commitlint](https://www.npmjs.com/package/commitlint) is one the package that helps you with this.
       
  - pre-push: 
  
-      For a small project, pre push would be a good place to run `npm build`. Why ? Running it for every commit seems like a over kill. At the same time if your project is too big and takes time it would be better to add the build job to the CI pipeline as we discussed above since we dont want your developers to lose context of what they have to do while the project build for 7-10 mins.
+      For a small project, pre-push would be a good place to run `npm build`. Why ? Running it for every commit seems like a over kill. At the same time if your project is too big and takes time to build it would be better to add the build job to the CI pipeline as we discussed above since we dont want your developers to lose context of what they have to do while the project build for 7-10 mins. Keep your build check in the CI pipeline as well even if you are adding it to pre-push hook.
       
       Also, this could be a place to run `npm test` as well. You can either run all your tests. Or you can run just the tests related to the files the developer has changed and then run all your test in the CI pipeline.
 
 
 
-For example: A very simple setup that can be done for your project. What this will do it for every commit it will format your javascript/typescript files and auto fix all the eslint issues. If any of this fails, it will not allow the developer to commit the changes.  
+For example: A very simple setup that can be done for your project is shown below :arrow_down:. What this will do is for every commit it will format your javascript/typescript files and auto fix all the eslint issues. If any of this fails, it will not allow the developer to commit the changes.  
 
 ```json
 // package.json
@@ -73,7 +73,7 @@ For example: A very simple setup that can be done for your project. What this wi
 
 ```
 
-What is `lint-staged` right? [lint-staged](https://www.npmjs.com/package/lint-staged) allows you to run lint and prettier only on the files that are staged by `git add` and not on all files. You can run any command for the hooks, like for example
+What is `lint-staged` right? [lint-staged](https://www.npmjs.com/package/lint-staged) allows you to run lint and prettier only on the files that are staged by `git add` and not on all files. Besides you can run any command for the hooks, like for example
 
 
 ```json
@@ -100,9 +100,11 @@ You can also run multiple commands by appending them by `&&`
 
 ```
 
+Thank you reading so far, if you like the article or found it useful, feel free to share and let me know
 
 ## Other Resources
 
 - Paul Armstrong's talk on ["Move fast with confidence"](https://www.youtube.com/watch?v=ikn_dBSski8&t=899s)
+- Angie Jones talk on ["Visual Tests in every pull request"](https://githubuniverse.com/Visual-tests-on-every-pull-request/)
 
   
