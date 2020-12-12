@@ -30,7 +30,7 @@ This was where I was very confused as to what is the one thing and how do I desc
 
 > My tip: It is not necessary that you should be able to write a clean function in the first go itself. But you should definitely iterate over and over until you feel satisfied with what you have written. Software development is an iterative process. Slowly and gradually it will come to you naturally.
 
-**3. Comments**
+**3. Comments - Make them helpful**
 
 All developers write comments, but what matters is how truthful or helpful they are. This book points out some really good points to keep in mind when you think of writing comments. Listing down some important points that I have seen people do while reviewing code
 
@@ -43,6 +43,24 @@ All developers write comments, but what matters is how truthful or helpful they 
 > My tip: For developers writing code, ensure that your comments are not pointing out obvious things that your code can already explain. Code is the source of truth, let is explain most of the things. Write comments to clarify, enhance your code rather than to add noise. For reviewers, ensure that there are proper comments if some piece of code is not clearly explainable. Ensure that TODO comments or commented out code is not left out in your system.
 
  **Fun thread** :laughing: : I found this thread while reading about importance of quality of comments. Hope you enjoy it. [What is the best comment in source code you have ever encountered?](https://stackoverflow.com/questions/184618/what-is-the-best-comment-in-source-code-you-have-ever-encountered)
+
+**4. Clean Tests - keep them updated**
+
+Tests are equally important part of the development as the code itself. The main factor that makes test clean are readability
+
+- One test should test one thing. As said in the book One Asset per test
+- Keep your test updated as the code evolves.
+- Tests should run in any environment. The test should not be specific to the environment
+- The test should have boolean output. Either they pass or fail
+
+
+**5 Clean Classes - Keep it short**
+
+ - As you might already have understood, the classes should be small in size.
+ - A class should have one responsibility ie only a single reason to change. It is also called as Single Responsibility Principle. Identify the different responsibilities
+ - Class name should be able to explain the responsibility of the class
+ 
+ > My Tip: Think about what you need to perform to get the desired result. Write them down as high level steps. Check if each step is independent and if the step could be broken into smaller independednt steps. Convert each step to a class. For example, I want to read a some files(of type zip,tar) and perform some operation on those files. Now I could create a single class, pass the file path to the constructor and create two methods `read()` and `process()`. But instead I can separate the responsibilties. I can create a separate class to do read the file contents. The responsibility of this class is to be read the files(of any type) and of any location(we could provide a local path or a link to file stored somewhere). Then create a separate class and pass a instance of the reader class to the processor class and use it. The processor class responsibility is to do perform all the required operations on the file contents. 
 
 
 ## Resources
