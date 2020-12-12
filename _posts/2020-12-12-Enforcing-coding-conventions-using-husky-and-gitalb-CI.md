@@ -103,6 +103,6 @@ You can also run multiple commands by appending them by `&&`
 
 ## Other Resources
 
-- Paul Armstrong's talk on "Move fast with confidence"(https://www.youtube.com/watch?v=ikn_dBSski8&t=899s)
+- Paul Armstrong's talk on ["Move fast with confidence"](https://www.youtube.com/watch?v=ikn_dBSski8&t=899s)
 
   
