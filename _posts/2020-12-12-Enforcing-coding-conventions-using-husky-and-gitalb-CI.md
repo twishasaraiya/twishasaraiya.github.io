@@ -1,22 +1,22 @@
-Is it becoming difficult to maintain the code ? Is your team pushing changes frequently ? and are you owner of any of these features or entire module? If youranswer to any one of them is yes then this blog might be worth your time
+Is it becoming difficult to maintain the code ? Is your team pushing changes frequently ? and are you owner of any of these features or entire module? If your answer to any one of them is yes then this blog might be worth your time
 
-So you have your code and you have a team and you need to meet deadlines AND **you also need to ensure that code is maintainable** and big AND **this is your first time**. In this blog I am going to put across some ideas how we can make it easier. At the bottom, I have also shared some of the talks, blogs that I found during my reseacrh
+So you have your code and you have a team and you need to meet deadlines AND **you also need to ensure that code is maintainable** and big AND **this is your first time owning a module**. In this blog I am going to put across some ideas how we can make it easier. At the bottom, I have also shared some of the talks, blogs that I found during my reseacrh
 
 > Disclaimer: The examples and tools are specific to Javascript language and Gitlab CI but the generic idea could be used across any language
 
 ## **Setup CI jobs** - Make your reviewers life easier
 
-If have a CI/CD setup, then awesome we will talk about how to make it better. If not, you should definitely start looking into it first right now. 
+If you have a CI/CD setup, then awesome :+1: we will talk about how to make it better. If not, you should definitely start looking into it first right now.:pray: 
 
-We had a CI/CD pipeline setup just to ease the deployments, nothing more. But we can do better, right ? we can find the issues right before they even get merged. This reduces a lot of effort and time in the lifecycle. Your developers know the issues before it goes for testing and your reviewer's job is automated too so they can spend time on other areas 
+We had a CI/CD pipeline setup just to ease the deployments, nothing more. But we can do better, right ? we can find the issues right before they even get merged. This reduces a lot of effort and time in the development lifecycle. Your developers know the issues before it goes for testing and your reviewer's job is automated too so they can spend time on other areas 
 
 Few of basic checks that you can have in your CI pipeline are
 
- - **Check if you build is passing** : One of the new developers on the team has made some breaking changes. We realise that after the deployment fails. This could affect a developers confidence. We dont want that. So basically this check will block you merge request and let your developer know that something has broken. We setup our build job in way that for different target branches then it should build for a different configurations/environments.
- - **Check if you any lint errors** : Any more than 2-3 people working on the team, needs this check. You need to setup a `eslint.yaml` with your rules configured or use one of the standards provided by `google` or `airbnb`. For every merge request it will run and show a list of errors in the (gitlab or github)UI itself. The reviewer need not manually check for this every time and make comment for the developer to resolve. Again this could be a blocking check too for the merge request.
+ - **Check if you build is passing** : Consider a scenarios where one of the new developers on the team has made some breaking changes. We realise that after the deployment fails. This could affect the developer's confidence. We dont want that. So basically this check will block your mrerge request and let your developer know that something has broken. We setup our build job in way that for different target branches then it should build for a different configurations/environments.
+ - **Check if you any lint errors** : Do you have more than 2-3 people working on the same codebase,then you need this check. You can just setup a `eslint.yaml` with your rules configured or use one of the standards provided by `google` or `airbnb`. For every merge request it will run and show a list of errors in the (gitlab or github)UI itself. The reviewer need not manually check for this every time and make comment for the developer to resolve. Again this could be a blocking check too for the merge request.
  - **Check if all your test are passing** : You are building new features but at the same time you dont want the current features to stop working. Adding this check helps us realize faster if any of the current features are breaking because of the new changes. Now for this check to give you proper result you need to have good amount and quality of test cases written. Another scenario might be you are enchancing the current feature but the testcases are not updated. This check will tell your developer to update the testcase as well with the enhancements. This way your tests remain updated too.
 
-Some of the other checks that could be setup are
+Some of the other checks that could be added are
 
 -  **[Code quality](https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html)** : You can have a code quality requirements that must be passed before it goes to production. This check provides you reports and how much more effort would be required on development side. You can provide data rather than words to the project manager. 
 - **Visual Tests** : Visual test in the merge request helps to understand how the look and feel of the button or any UI component has changed. If you are building a project with a frontend team, for every new feature or css changes it would be difficult for developers to provide screenshots for the reviewer to provide. There are multiple approaches that I have found on this and we are trying it out too. I will update this with my take on this later.
