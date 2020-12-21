@@ -1,0 +1,123 @@
+## Quiz Game
+
+
+This is my first project in GO.
+Lets break it down into high level steps and then search for each of them
+
+- [Quiz Game](#quiz-game)
+  - [Read a local file](#read-a-local-file)
+  - [How to parse csv](#how-to-parse-csv)
+  - [Score calculation](#score-calculation)
+  - [Output](#output)
+  - [Command line flags](#command-line-flags)
+  - [Optimization](#optimization)
+
+
+### Read a local file
+
+- Package [os](https://golang.org/pkg/os/)
+- Go by example provides another way of [reading file](https://gobyexample.com/reading-files)
+- The Open method takes string file name or the absolute path as input and returns a File, if not the second value is the error
+- We handle the error by checking if it is not nil and simply log out the error
+
+```go
+import (
+    "os"
+)
+
+var filePath = "problems.csv"
+file, err := os.Open(filePath)
+if err != nil {
+	log.Fatal(err)
+}
+```
+
+### How to parse csv
+
+- Package [csv](https://golang.org/pkg/encoding/csv/)
+- The `NewReader()` method reads the file that we got from the `os.Open()`
+- The method returns an instance of type `Reader`. 
+- The default delimiter is comma, but other can be specifed as well by modifying the `Reader`
+
+```go
+reader := csv.NewReader(file)
+questions, err := reader.ReadAll()
+```
+
+### Score calculation
+
+- We have the question and answer pair as array of slices, where first value if the question and second is the correct answer
+- We define a score variable of type `int`
+- Loop through all the questions
+- `range` returns two values. First is index and second is the slice consisting of question and answer (i.e each row in the csv file)
+- Also import the `strconv` package to convert the correct answer from csv file to be of type int, so that we can compare it with the value provided by the user. For this we use `Atoi` method.
+  
+
+```go
+score := 0
+var answer int
+var correctAnswer int
+for _, row := range questions {
+	fmt.Println(row[0])
+	fmt.Scanf("%d", &answer)
+	correctAnswer, _ = strconv.Atoi(row[1])
+	if answer == correctAnswer {
+		score += 1
+	}
+}
+```
+
+### Output 
+
+Package: [fmt](https://golang.org/pkg/fmt/)
+- The final score is stored in `score` variable
+- There are various output methods available. But for simplicity we use `Print()`
+- User input can be taken using `Scanf`
+- If you are already know c/c++, like me, you must already be familiar with `printf` and `scanf`
+
+```go
+fmt.Print("Your score is",score)
+```
+
+### Command line flags
+
+- Package: [flag](https://golang.org/pkg/flag/)
+- The user should be able to provide the csv file via the command line
+- We define a flag of type string with default value as "problems.csv"
+- The flag returns location to the file name provided by the user. So we use `*fileName` to read its value
+
+```go
+var fileName = flag.String("csv", "problems.csv","a csv file in the format of 'question,answer' (default 'problems.csv')")
+	flag.Parse()
+	file, err := os.Open(*fileName)
+```
+
+Additional to see all flags
+
+```go
+go run main.go --help
+// or
+go run main.go -h
+```
+
+### Optimization
+
+- Define a type of the problem
+```go
+type problem struct{
+	question string
+	correctAnswer string
+}
+```
+
+- Invalid csv input. If the csv contains strings
+
+```go 
+import "strings"
+for idx,row := range rows {
+	data[idx] = problem{
+		question: row[0],
+		correctAnswer: strings.Trimspace(row[1]),
+	}
+}
+```

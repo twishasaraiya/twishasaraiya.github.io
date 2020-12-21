@@ -154,6 +154,11 @@ footer:
       icon: "fab fa-fw fa-instagram"
       # url:
 
+# Collections
+collections:
+  learngo:
+    output: true
+    permalink: /:collection/:path
 
 # Reading Files
 include:
@@ -297,5 +302,14 @@ defaults:
       type: pages
     values:
       layout: archive
+  # learngo
+  - scope:
+      path: ""
+      type: learngo
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
 
 theme: jekyll-theme-cayman
