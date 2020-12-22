@@ -310,7 +310,7 @@ defaults:
       path: "learngo"
       type: learngo
     values:
-      layout: single
+      layout: learngo
       author_profile: true
       read_time: true
       share: true
