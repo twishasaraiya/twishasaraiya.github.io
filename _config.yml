@@ -307,7 +307,7 @@ defaults:
       layout: archive
   # _learngo
   - scope:
-      path: ""
+      path: "learngo"
       type: learngo
     values:
       layout: single
