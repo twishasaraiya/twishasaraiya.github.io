@@ -4,9 +4,9 @@ main:
     url: /
   - title: "About"
     url: /about/
-#   - title: "Education"
-#     url: /education/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
+  #   - title: "Education"
+  #     url: /education/
+  - title: "Learn Go"
+    url: /learngo/
   # - title: "Sitemap"
   #   url: /sitemap/

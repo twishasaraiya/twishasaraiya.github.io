@@ -22,7 +22,7 @@ subtitle                 : # site tagline that appears below site title in masth
 name                     : ""
 description              : "Exploration Blog"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "twishasaraiya.github.io/" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
@@ -164,6 +164,7 @@ collections:
 include:
   - .htaccess
   - _pages
+  - _learngo
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -238,6 +239,8 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
+gems: [jekyll-paginate]
+
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
@@ -302,7 +305,7 @@ defaults:
       type: pages
     values:
       layout: archive
-  # learngo
+  # _learngo
   - scope:
       path: ""
       type: learngo
