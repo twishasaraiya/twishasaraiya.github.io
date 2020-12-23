@@ -2,6 +2,7 @@
 
 > The goal of this exercise is to create an http.Handler that will look at the path of any incoming web request and determine if it should redirect the user to a new page, much like URL shortener would.
 
+- [Problem Statement on Gophercises](https://courses.calhoun.io/lessons/les_goph_04)
 - [URL Shorterner](#url-shorterner)
   - [Create a new module](#create-a-new-module)
   - [Understanding Map](#understanding-map)
