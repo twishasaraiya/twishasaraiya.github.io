@@ -155,10 +155,10 @@ footer:
       # url:
 
 # Collections
-collections:
-  learngo:
-    output: true
-    permalink: /:collection/:path
+# collections:
+#   learngo:
+#     output: true
+#     permalink: /:collection/:path
 
 # Reading Files
 include:
