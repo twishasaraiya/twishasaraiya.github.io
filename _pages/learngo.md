@@ -1,10 +1,8 @@
 ---
 title: Learn Go
-layout: collection
+layout: post
 permalink: /learngo/
 collection: learngo
-entries_layout: grid
-classes: wide
 ---
 
 Collection of all blogs for learning golang
