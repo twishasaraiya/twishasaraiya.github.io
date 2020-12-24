@@ -1,6 +1,6 @@
 ---
 title: Learn Go
-layout: post
+layout: posts
 permalink: /learngo/
 collection: learngo
 ---
