@@ -1,7 +1,7 @@
 ---
 name: How to build a Quiz Game in Go
 date: 20-12-2020
-layout: learngo
+layout: single
 ---
 
 ## Quiz Game
