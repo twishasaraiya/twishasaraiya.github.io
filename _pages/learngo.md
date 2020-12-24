@@ -6,3 +6,5 @@ collection: learngo
 entries_layout: grid
 classes: wide
 ---
+
+Collection of all blogs for learning golang

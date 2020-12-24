@@ -1,3 +1,8 @@
+---
+collection: learngo
+date: 22-12-2020
+---
+
 # URL Shorterner
 
 This is part 2 of the two series blog post. In this blog post I am going to talk about things I learned while implementing the bonus section of the URL shorterner excercise from [Gophercises](https://courses.calhoun.io/lessons/les_goph_04)
