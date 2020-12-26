@@ -1,7 +1,7 @@
 ---
 name: How to build a URL Shorterner in Go - Part 2
 date: 22-12-2020
-layout: learngo
+layout: single
 ---
 
 # URL Shorterner

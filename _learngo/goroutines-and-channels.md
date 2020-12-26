@@ -1,3 +1,8 @@
+---
+name: Goroutines and Channels
+layout: single
+---
+
 ### Learn Go - Day 5
 
 Go routines are essentially like thread. If I can say it in a simple way, it is a concurrently running task. We have one `main` go routine that runs by default and executes all the tasks, like the exercises that we have been doing so far

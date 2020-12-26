@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: archive
 ---
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
@@ -16,8 +16,8 @@ layout: default
 
 {{ content }}
 
-<div class="entries-{{ page.entries_layout | default: 'list' }}">
+<<div class="entries-{{ page.entries_layout | default: 'list' }}">
   {% for post in site.learngo %}
-  {% include archive-single.html type=page.entries_layout %}
+    {% include archive-single.html type=page.entries_layout %}
   {% endfor %}
 </div>

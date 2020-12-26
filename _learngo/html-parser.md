@@ -1,5 +1,6 @@
 ---
 name: How to build a HTML Parser
+layout: single
 ---
 
 ## HTML Parser

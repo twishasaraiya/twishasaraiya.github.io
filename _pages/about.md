@@ -3,6 +3,7 @@ title: "About"
 excerpt: "Who am I?"
 sitemap: false
 permalink: /about/
+layout: single
 ---
 
 Hi there,
