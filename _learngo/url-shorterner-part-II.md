@@ -55,7 +55,7 @@ if err != nil {
 return path,nil
 
 ```
-- Now that we have the data from YAML file into our standard defined structure we convert it to a map using `buildMap()`. This method would be a generic one that would always take a the `Path` data type and build a `map[string]string` from it. This method is not concerned with where the original data comes from be it YAML, json or simple string. So we have decoupled the responsibilities
+- Now url-shorterner-part-IIthat we have the data from YAML file into our standard defined structure we convert it to a map using `buildMap()`. This method would be a generic one that would always take a the `Path` data type and build a `map[string]string` from it. This method is not concerned with where the original data comes from be it YAML, json or simple string. So we have decoupled the responsibilities
 ```go
 // buildMap
 m := make(map[string]string, len(parsedData))
