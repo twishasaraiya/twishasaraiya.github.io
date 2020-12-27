@@ -3,9 +3,8 @@ name: How to build a HTML Parser
 layout: single
 ---
 
-## HTML Parser
+## Exercise 4 of Gophercises - To build a HTML parser package using golang
 
-- Fourth excercise in gophercises
 - Build a package that extracts all links from the provided HTML page
 - Things Learned
   - [Parsing Html](#html-parser)

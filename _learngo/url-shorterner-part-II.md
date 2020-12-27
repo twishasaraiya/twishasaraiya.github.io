@@ -4,14 +4,14 @@ date: 22-12-2020
 layout: single
 ---
 
-# URL Shorterner
+## In Part 2, We explore how to accept different file formats(YAML, JSON) and parse them
 
 This is part 2 of the two series blog post. In this blog post I am going to talk about things I learned while implementing the bonus section of the URL shorterner excercise from [Gophercises](https://courses.calhoun.io/lessons/les_goph_04)
 
-- [URL Shorterner](#url-shorterner)
-    - [YAML Parser](#yaml-parser)
-    - [JSON Parser](#json-parser)
-    - [Command line flags](#command-line-flags)
+- [In Part 2, We explore how to accept different file formats(YAML, JSON) and parse them](#in-part-2-we-explore-how-to-accept-different-file-formatsyaml-json-and-parse-them)
+  - [YAML Parser](#yaml-parser)
+  - [JSON Parser](#json-parser)
+  - [Command line flags](#command-line-flags)
 
 ### YAML Parser
 

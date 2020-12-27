@@ -4,7 +4,7 @@ date: 21-12-2020
 layout: single
 ---
 
-## URL Shorterner
+## In Part 1, we explore go modules, map and http server
 
 > The goal of this exercise is to create an http.Handler that will look at the path of any incoming web request and determine if it should redirect the user to a new page, much like URL shortener would.
 

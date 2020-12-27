@@ -4,13 +4,13 @@ date: 20-12-2020
 layout: single
 ---
 
-## Quiz Game
+## Exercise 1 of Gophercises - Build a terminal based Quiz game
 
 
-This is my first project in GO.
-Lets break it down into high level steps and then search for each of them
+This is my first project in GO. I started this after 1 day of going through the syntax of Go using Tour of Go in the official documentation. Now I wanted to get my hands on it and build something and learn along the way.
+So lets break down the problem into high level steps and then search for each of them
 
-- [Quiz Game](#quiz-game)
+- [Exercise 1 of Gophercises - Build a terminal based Quiz game](#exercise-1-of-gophercises---build-a-terminal-based-quiz-game)
 	- [Read a local file](#read-a-local-file)
 	- [How to parse csv](#how-to-parse-csv)
 	- [Score calculation](#score-calculation)

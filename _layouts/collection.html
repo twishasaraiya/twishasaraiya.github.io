@@ -8,12 +8,6 @@ layout: archive
   {% include page__hero_video.html %}
 {% endif %}
 
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
-
 {{ content }}
 
 <<div class="entries-{{ page.entries_layout | default: 'list' }}">
