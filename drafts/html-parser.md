@@ -5,8 +5,7 @@ layout: single
 
 ## We explore html parsing methods, go functions and methods, lexical scope
 
-- Build a package that extracts all links from the provided HTML page
-- Things Learned
+- The idea is to build a package that extracts all links from the provided HTML page
   - [Problem Statement](#problem-statement)
   - [Parsing Html](#html-parser)
   - [Functions vs Methods](#functions-and-methods)
@@ -14,14 +13,22 @@ layout: single
   - [String methods](#various-string-methods)
   - [Go Constants](#constants-in-go)
 
+You can checkout github source code for the solution [here](https://github.com/twishasaraiya/learngo/tree/master/html-parser)
 
 ### Problem Statement
 
-Read more about the problem statement [here](https://gophercises.com/)
+This project was built as part of Excercise 4: HTML Link Parser. You can read more about the problem statement [here](https://gophercises.com/)
+
+Let's break down the problem into steps
+
+1. How can I parse the HTML? I have a url, how can I get the DOM tree from the url
+2. Now that I have the DOM nodes, how can I extract the links (anchor tags) and store them ? (*Think of structure/format in which data can be stored*)
+3. Another point to consider is we need to keep track of nested links as well. How can I achieve it? (*Think of algorithm that could be helpful in this case*)
+4. Final output the data. This step is the easiest!!
 
 ### Parsing HTML
 
-Lets start with a html as string for simplicity purpose
+Lets start with a static html as string for simplicity purpose
 
 ```go
 doc := `<html>
@@ -88,10 +95,7 @@ Functions and methods maybe used in the same context in other languages but in G
 | Input Parameters - The data that is passed as input to the function. Syntax: <variableName> <Type>. Incase multiple variable have same type it can also be defined as <var1>, <var2> <Type>                       | ```go func name(abc string)```                |
 | Return Type - The type of data that is returned from the function. The return Type is defined after input paramerter. In case of multiple returns values it can be specified as follows : `(string, int, <type>)` | ```go func name(abc string) string { ... }``` |
 
-
-Not having used methods much I will not diving deep into it in this blog. Maybe a separate blog in future
-
-### Lexical Scope variables
+Not having used methods much I will not dive deep into it in this blog. Maybe a separate blog in future
 
 ### Various string methods
 <!-- compare them to javascript -->

@@ -9,10 +9,12 @@ layout: single
 > The goal of this exercise is to create an http.Handler that will look at the path of any incoming web request and determine if it should redirect the user to a new page, much like URL shortener would.
 
 - [Problem Statement on Gophercises](https://courses.calhoun.io/lessons/les_goph_04)
-- [URL Shorterner](#url-shorterner)
-  - [Create a new module](#create-a-new-module)
-  - [Understanding Map](#understanding-map)
-  - [Create a http server](#create-a-http-server)
+
+Lets us try to break the problem into smaller parts and solve them one by one.
+
+  - How to [create module](#create-a-new-module)? Why and when should you create one?
+  - What data structure can we use ? We will need a [map](#understanding-map). *We will look at  how to use map in golang*
+  - Finally, we need to have a [http server](#create-a-http-server) for the service.
 
 ### Create a new module
 
@@ -44,9 +46,13 @@ Now we see a new Error something like
 found packages urlshort (handler.go) and main (main.go) in /home/twisha/Desktop/go/url-shorterner
 ```
 
-What this is ? To understand it, lets first see **what a module is?** A module is a collection of related packages. **What is a package?** A package is a directory in the go project consisting of multiple go files. 
+What this is ? To understand it, lets first see 
 
-In our current scenarios we have go found 2 module at the root level. One is urlshort and other is main. Typically, a go project contains only one module at the top level. To resolve we can do 2 things
+**What a module is?** A module is a collection of related packages. 
+
+**What is a package?** A package is a directory in the go project consisting of multiple go files. 
+
+In our current scenarios we have go found 2 module at the root level. One is `urlshort` and other is `main`. Typically, a go project contains only one module at the top level. To resolve we can do 2 things
 
 **One**: Change the package name in handler.go. Now both go source files belong to the same main module
 ```
@@ -71,30 +77,28 @@ import (
 )
 ```
 
-- Read more about [How to write go code](https://golang.org/doc/code.html)
+Read more about [How to write go code](https://golang.org/doc/code.html) in the official documentation provided by go team
 
 
-### Understanding Map
+### Map
 
 - As seen in other languages, map is a dictonary to store key-value pairs
-- Maps cheatsheet
+
+- I have created a cheatsheet for map with examples for reference
 
 ```go
 // create a new map[keyType]valueType
 
 var m map[string]string
-
 // m is nil currently
 // writing m["root"] will result in error
 
 // so we need to initialize the map
-
 m = make(map[string]string)
-
-// now the map acts as an empty object and allows us to do 
+// now the map acts as an empty object
 
 val := m["root"]
-// the value of the key that does not exist will be empty string ""
+// the value of the key that does not exist, so default will be empty string ""
 
 // add/update the key
 m["root"] = "root"
@@ -107,8 +111,6 @@ m["root"] = "root"
 // val = "", ok = false
 val, ok := m["root"]
 
-
-
 // get length of map
 n := len(m)
 
@@ -118,8 +120,8 @@ delete(m, "root")
 
 ```
 
-- Play around with maps [here](https://play.golang.org/)
-- Read more about [Map](https://blog.golang.org/maps)
+- Play around with maps in [playground](https://play.golang.org/)
+- Read more about [Map](https://blog.golang.org/maps) in the offical documentation
 
 
 ### Create a http server
@@ -137,3 +139,9 @@ http.HandleFunc("/", handler)
 //http.ListenAndServe(PORT string, nil)
 http.ListenAndServe(":8080", nil)
 ```
+
+In this part, we saw how to create a new module, how to create a static map and start a server. This concepts will help you complete the exercise. 
+
+I have not provided the codes for subproblems, because I strongly you trying to solve them on your own using these concepts. However if you feel stuck at any point, you can find the solution [here](https://github.com/twishasaraiya/learngo/tree/master/url-shorterner)
+
+In the [next part](url-shorterner-part-II.md) we look at how to store the data in human readable format (like JSON/YAML), parse and building a map from it and learn about command line flags as well
