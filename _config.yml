@@ -20,7 +20,7 @@ title                    : "Twisha Saraiya"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : ""
-description              : "Exploration Blog"
+description              : "Journey of a women in software engineering and AI since 2019. Blog about technologies, software engineering, development and AI in general"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "twishasaraiya.github.io/" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
