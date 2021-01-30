@@ -243,12 +243,11 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
-gems: [jekyll-paginate, jekyll-include-cache]
+gems: [jekyll-paginate, jekyll-include-cache, jekyll-sitemap]
 
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
