@@ -1,3 +1,7 @@
+---
+title: "Step-by-Step Guide: Angular Infinite Scroll With Responsive viewport"
+description: "Use angular material SDK to implement angular infinite/virtual scroll with a responsive layout"
+---
 
 > I recently implemented Infinite Scrolling for a large amount data stored in firestore, with response layout using Angular 9. So this post is just a small replica of the same
 
