@@ -104,6 +104,9 @@ analytics:
     tracking_id          : "G-LKH4X2BPKW"
     anonymize_ip         : false # true, false (default)
 
+# Plugins
+plugins:
+  - jekyll-sitemap
 
 # Site Author
 author:
