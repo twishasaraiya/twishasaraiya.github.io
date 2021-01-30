@@ -1,3 +1,5 @@
+### 5 Essential takeways from Clean Code By Uncle Bob
+
 As developers we can write code but the question that I started to look for is the code I am writing clean? Is it making the lives of next developer easier? 
 Or as a reviewer how do I ensure that the code is readable and maintainable ? What are the basic things to look for ? This is when I came across the the book **Clean Code - Robert C Martin**
 
