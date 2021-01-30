@@ -1,3 +1,4 @@
+---
 title: "How to write clean code? 5 simple tips"
 description: "On improving your coding style by writing clean code and maintaining readability of your codebase"
 ---
