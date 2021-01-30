@@ -1,4 +1,7 @@
-## With code snippets
+---
+title: "How to run Mocha programmatically with custom reporter with code examples"
+description: "Code examples to run the mocha tests from your program itself and setup a custom reporter in mocha"
+---
 
 We normally run mocha test from the command line, right? But what if we want to run the test from the program itself and write the results of this tests to some file(html, json, txt)
 
