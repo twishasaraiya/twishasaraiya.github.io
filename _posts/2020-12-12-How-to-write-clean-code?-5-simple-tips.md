@@ -1,3 +1,7 @@
+title: "How to write clean code? 5 simple tips"
+description: "On improving your coding style by writing clean code and maintaining readability of your codebase"
+---
+
 ### 5 Essential takeways from Clean Code By Uncle Bob
 
 As developers we can write code but the question that I started to look for is the code I am writing clean? Is it making the lives of next developer easier? 
