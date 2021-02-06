@@ -1,6 +1,7 @@
 ---
 title: "How you can contribute to improve developer productivity of your team as junior developer?"
 description: "Save time and effort and improve developer productivity by improving your CI/CD workfows. Tips to enhance your CI/CD pipeline and ease out the development and deployment process by automating code reviews. Code examples for using husky hooks and prettier with any javascript project. Identify and automate the daily tasks using DRY principle"
+excerpt: "Save time and effort and improve developer productivity by improving your CI/CD workfows. Tips with detailed thought process to enhance your CI/CD pipeline and ease out the development and deployment process by automating code reviews. Code examples for configuring husky hooks and prettier in your project"
 ---
 
 Is it becoming difficult to maintain the code ?
