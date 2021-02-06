@@ -1,10 +1,15 @@
 ---
-title: "Enforcing coding conventions using Husky and Gitalb CI"
-description: "Save time and effort and improve developer productivity by improving your CI/CD workfows. Tips to enhance your CI/CD pipeline and ease out the development and deployment process by automating code reviews"
+title: "How you can contribute to improve developer productivity of your team as junior developer?"
+description: "Save time and effort and improve developer productivity by improving your CI/CD workfows. Tips to enhance your CI/CD pipeline and ease out the development and deployment process by automating code reviews. Code examples for using husky hooks and prettier with any javascript project. Identify and automate the daily tasks using DRY principle"
 ---
 
+Is it becoming difficult to maintain the code ?
 
-Is it becoming difficult to maintain the code ? Is your team pushing changes frequently ? and are you owner of any of these features or entire module? If your answer to any one of them is yes then this blog might be worth your time
+Is your team pushing changes frequently ? 
+
+Are you owner of any of these features or entire module? 
+
+If your answer to any one of them is **yes** then this blog might be worth your time
 
 So you have your code and you have a team and you need to meet deadlines AND **you also need to ensure that code is maintainable** and big AND **this is your first time owning a module**. In this blog I am going to put across some ideas how we can make it easier. At the bottom, I have also shared some of the talks, blogs that I found during my reseacrh
 
