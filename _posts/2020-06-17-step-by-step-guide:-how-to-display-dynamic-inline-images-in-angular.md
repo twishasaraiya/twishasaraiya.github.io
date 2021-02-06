@@ -1,3 +1,10 @@
+---
+title: "Step By Step Guide: How to render dynamic inline images in Angular"
+description: "Step by step guide with code examples on how to add images to your angular website and angular material. Load dynamic images in your HTML withoud using any external library. Render embedded images or inline attachments provided by Microsoft Graph API mails in your angular 8 webpage"
+---
+
+
+
 Recently I was working on a feature to read attachments from inbox. Thats when I faced an issue for rendering inline images in the application. The requirement was that the attachments should be shown separate and inline images should be shown as part of the email body itself. So now that we know what is the requirement lets deep dive into it then!
 
 ### Pre-requisites 
