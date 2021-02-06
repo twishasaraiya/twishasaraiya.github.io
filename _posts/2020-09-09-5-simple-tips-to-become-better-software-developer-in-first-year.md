@@ -1,3 +1,8 @@
+---
+title: "5 Simple Tips to become a better Software Developer at your first job"
+description: "Now that you have got your first job, how do you become better at it? How to ace the first year of your new job as a software developer using this 5 simple tips from personal experience. Improve as a developer by following this simple strategies. Dont make the entry level engineers mistakes and shine at your first job"
+---
+
 After working for a little more than a year as a software developer in the industry, I would like to share what I have learned as a professional developer and how my perspectives changed after graduating. 
 
 ## A little about me
