@@ -14,4 +14,10 @@
     - Object Storage(GCP CLoud storage, AWS S3)
   - Must know concepts
       - ACID properties
+
+- Cache layer
+  - What is caching?
+  - Examples
+  - Cache patterns
+  - How to explore it? if possible give some homework
       
