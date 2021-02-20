@@ -20,4 +20,11 @@
   - Examples
   - Cache patterns
   - How to explore it? if possible give some homework
+
+- Message Queue
+   - Pub/Sub pattern
+   - FactorsToConsider#1 : Order of messages(with examples eg: AWS SQS, GCP Pub/sub)
+   - Topics/channels
+   - FactorsToConsider#2 : Consumption - one-2-one, one-2-many
+   - 
       
