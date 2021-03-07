@@ -2,11 +2,11 @@
 main:
   - title: "Blog"
     url: /
+  - title: "Learn Go"
+    url: /learngo/
   - title: "About"
     url: /about/
   #   - title: "Education"
-  #     url: /education/
-  - title: "Learn Go"
-    url: /learngo/
+  #     url: /education
   # - title: "Sitemap"
   #   url: /sitemap/
