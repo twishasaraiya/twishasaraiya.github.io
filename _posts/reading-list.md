@@ -5,3 +5,4 @@
 ## 2021
 - On Writing well by William
 - System Design Inside Out by Alex 
+- Startup of You
