@@ -1,3 +1,18 @@
+Audience: Backend/Fullstack Engineer looking to explore deployment
+
+Pre-requisite:
+ - Nodejs API
+
+Goal: 
+
+## What is Docker?
+
+## Basics of Docker + Resources 
+
+## Creating a dockerfile
+
+## Pushing to Container Registry
+
 // specify . at end so that it can pick dockerfile from current location
 docker build -t <IMAGE_NAME>:<OPtIONAL_TAG_NAME> .
 
@@ -27,3 +42,7 @@ gcloud auth login
 gcloud auth configure-docker
 
  docker push gcr.io/qai-bd-qa/es-cx-migration-api
+
+## What Next?
+
+Using this docker file you can share is easily and deploy to an instance by writing a YAML file
