@@ -12,3 +12,9 @@ Unlike other HTTP code(like 401, 500), the 429 is not because of an issue in cal
 <div class="code_container">
 <iframe src="https://stackblitz.com/edit/retry-api-call-axios-interceptor?embed=1&file=index.ts&hideNavigation=1&view=editor"></iframe>
 </div>
+
+## Part 2: Batch Processing
+
+<div class="code_container">
+<iframe src="https://stackblitz.com/edit/batch-processing?embed=1&file=index.ts&hideNavigation=1&view=editor"></iframe>
+</div>
